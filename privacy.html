@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WS Elements — Confidentialité / Privacy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<nav><a href="#fr">Français</a><a href="#en">English</a><a href="index.html">Assistance / Support</a></nav>
+
+<section id="fr" lang="fr">
+<h1>Politique de confidentialité</h1>
+<p class="muted">WS Elements · en vigueur le 13 octobre 2026</p>
+
+<p>WS Elements est une application iPhone indépendante qui affiche les données de votre console WithSecure™ Elements. Elle est éditée par Florian Stillitano, développeur individuel (contact : <a href="mailto:florian.stillitano@wsecure.fr">florian.stillitano@wsecure.fr</a>). L'app ne contient ni publicité, ni mesure d'audience, ni suivi publicitaire, et ne vend aucune donnée.</p>
+
+<h2>Données traitées sur l'iPhone</h2>
+<ul>
+<li><strong>Clés API Elements</strong> (identifiant et secret) : stockées dans le trousseau iOS de l'appareil. Elles servent uniquement à interroger l'API WithSecure Elements (api.connect.withsecure.com).</li>
+<li><strong>Données de sécurité</strong> (appareils, incidents, détections, événements, journaux d'audit) : lues depuis l'API Elements, gardées en cache temporaire sur l'iPhone.</li>
+<li><strong>Face ID</strong> : géré par iOS ; l'app ne reçoit jamais de donnée biométrique.</li>
+</ul>
+
+<h2>Fonctions optionnelles, activées par l'utilisateur</h2>
+<p><strong>Notifications push.</strong> Si vous les activez et choisissez une clé à surveiller, sont envoyés à notre serveur de notifications (Supabase, Union européenne, Irlande) : le jeton de notification de l'iPhone, la langue et la version de l'app, une clé Elements <em>en lecture seule</em> (chiffrée en AES-256 sur le serveur) et vos règles de notification. Le serveur interroge l'API Elements chaque minute et transmet les alertes via le service de notifications d'Expo et le service Apple Push Notification ; le titre d'une notification peut contenir un nom d'incident ou d'appareil. L'historique des notifications est conservé 30 jours ; un compte inactif depuis 90 jours est supprimé avec ses données. « Effacer toutes les données » retire immédiatement l'iPhone et ses clés du serveur.</p>
+<p><strong>Analyste IA.</strong> Si vous configurez un fournisseur avec votre propre clé (Anthropic, OpenAI, Google ou Mistral AI), les données de l'incident ou de l'appareil analysé (détections, lignes de commande, noms de fichiers, événements) sont envoyées à ce fournisseur, après votre confirmation. L'option « Pseudonymiser les données », active par défaut, remplace les noms de machines, d'utilisateurs et les adresses IP internes avant l'envoi. Avec Apple Intelligence (modèle sur l'appareil) ou le mode démonstration, rien ne quitte l'iPhone. Ces fournisseurs traitent les données selon leurs propres conditions.</p>
+<p><strong>VirusTotal.</strong> Pour vérifier un fichier, l'app envoie à VirusTotal (Google) son empreinte (hash), jamais le fichier lui-même ; l'analyste IA peut aussi y vérifier des domaines et adresses IP publics. Les réponses sont gardées 7 jours sur l'iPhone.</p>
+
+<h2>Mises à jour</h2>
+<p>L'app télécharge ses mises à jour depuis le service Expo (EAS Update), qui reçoit les informations techniques nécessaires (adresse IP, version de l'app).</p>
+
+<h2>Vos droits</h2>
+<p>Vous pouvez effacer toutes les données à tout moment depuis Réglages → Effacer toutes les données, ou demander l'accès, la rectification ou la suppression de vos données par e-mail. Vous pouvez aussi saisir la CNIL (cnil.fr).</p>
+</section>
+
+<hr>
+
+<section id="en" lang="en">
+<h1>Privacy policy</h1>
+<p class="muted">WS Elements · effective October 13, 2026</p>
+
+<p>WS Elements is an independent iPhone app that shows the data of your WithSecure™ Elements console. It is published by Florian Stillitano, individual developer (contact: <a href="mailto:florian.stillitano@wsecure.fr">florian.stillitano@wsecure.fr</a>). The app has no advertising, no analytics, no ad tracking, and sells no data.</p>
+
+<h2>Data processed on the iPhone</h2>
+<ul>
+<li><strong>Elements API keys</strong> (ID and secret): stored in the device's iOS Keychain. They are only used to query the WithSecure Elements API (api.connect.withsecure.com).</li>
+<li><strong>Security data</strong> (devices, incidents, detections, events, audit logs): read from the Elements API, kept in a temporary cache on the iPhone.</li>
+<li><strong>Face ID</strong>: handled by iOS; the app never receives biometric data.</li>
+</ul>
+
+<h2>Optional features, turned on by the user</h2>
+<p><strong>Push notifications.</strong> If you turn them on and choose a key to watch, the following is sent to our notification server (Supabase, European Union, Ireland): the iPhone's notification token, the app's language and version, a <em>read-only</em> Elements key (encrypted with AES-256 on the server) and your notification rules. The server queries the Elements API every minute and delivers alerts through Expo's push service and the Apple Push Notification service; a notification's title may contain an incident or device name. Notification history is kept 30 days; an account inactive for 90 days is deleted with its data. "Erase all data" immediately removes the iPhone and its keys from the server.</p>
+<p><strong>AI analyst.</strong> If you set up a provider with your own key (Anthropic, OpenAI, Google or Mistral AI), the data of the analyzed incident or device (detections, command lines, file names, events) is sent to that provider, after your confirmation. The "Pseudonymize data" option, on by default, replaces machine names, user names and internal IP addresses before sending. With Apple Intelligence (on-device model) or the demo mode, nothing leaves the iPhone. These providers process data under their own terms.</p>
+<p><strong>VirusTotal.</strong> To check a file, the app sends VirusTotal (Google) its hash, never the file itself; the AI analyst may also check public domains and IP addresses there. Answers are kept 7 days on the iPhone.</p>
+
+<h2>Updates</h2>
+<p>The app downloads its updates from the Expo service (EAS Update), which receives the technical information needed (IP address, app version).</p>
+
+<h2>Your rights</h2>
+<p>You can erase all data at any time from Settings → Erase all data, or request access to, correction or deletion of your data by email. You may also lodge a complaint with your data protection authority.</p>
+</section>
+</main>
+</body>
+</html>
